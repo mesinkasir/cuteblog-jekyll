@@ -1,4 +1,4 @@
-# Cutblog for Jekyll blogger
+# Cuteblog for Jekyll blogger
 
 A new modern cuteblog for jekyll blogger
 
