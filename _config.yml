@@ -1,0 +1,11 @@
+title: Cute Blog 🥳
+author:
+  name: Axcora
+  link: https://website.axcora.com
+description: Cuteblog for jekyll free web blog template themes for jekyll rb with auto SEO.
+cuteblog:
+  date_format: "%b %-d, %Y"
+theme: cuteblog
+plugins:
+ - jekyll-feed
+ - jekyll-seo-tag

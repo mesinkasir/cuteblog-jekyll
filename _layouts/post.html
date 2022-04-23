@@ -1,0 +1,35 @@
+---
+layout: default
+---
+<article class="post h-entry container" itemscope itemtype="http://schema.org/BlogPosting">
+<div class="row p-3">
+<div class="col-md-12">
+  <main class="card p-1">
+  <img class="img-fluid card" alt="{{ page.title }}" width="100%" src="{{page.cover}}"/>
+    <div class="card-content p-3 p-md-5">
+  <h1><strong><a href="{{ page.url }}">{{ page.title | escape }}</a></strong> <span class="cute">✏️</span></h1>
+	<h2>📝 {{page.description}}</h2>
+      {%- assign date_format = site.dablogger.date_format | default: "%b %-d, %Y" -%}
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      👧 <a href="{{site.author.link}}">{{site.author.name}}</a>  ⏰ {{ page.date | date: date_format }}
+      </time>
+      {%- if page.modified_date -%}
+        ~ 
+        {%- assign mdate = page.modified_date | date_to_xmlschema -%}
+        <time class="dt-modified" datetime="{{ mdate }}" itemprop="dateModified">
+          {{ mdate | date: date_format }}
+        </time>
+      {%- endif -%}
+	  <p class="dotted"/>
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+  </main>
+</div>
+</div>
+</article>

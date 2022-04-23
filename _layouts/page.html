@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="container">
+<main class="row p-3">
+<div class="col-md-12 p-3">
+<section class="card p-1">
+  <img class="img-fluid" alt="{{ page.title }}" width="100%" src="{{page.cover}}"/>
+  <div class="card-content p-3">
+    <h1><strong><a href="{{ page.url }}">{{ page.title | escape }}</a></strong></h1>
+    {{ content }}
+  </div>
+</main>
+</div>
+</article>
