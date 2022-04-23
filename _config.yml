@@ -5,7 +5,7 @@ author:
 description: Cuteblog for jekyll free web blog template themes for jekyll rb with auto SEO.
 cuteblog:
   date_format: "%b %-d, %Y"
-theme: cuteblog
+theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
